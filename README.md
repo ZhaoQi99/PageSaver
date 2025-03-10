@@ -137,6 +137,10 @@ The property name in Notion to use for the MHTML file of a page.
 
 Default: `mhtml`
 
+### DATABASE_DIR
+The directory to store SQLite databases file.
+
+Default: `os.getcwd()`
 ## License
 [GNU General Public License v3.0](https://github.com/ZhaoQi99/PageSaver/blob/main/LICENSE)
 

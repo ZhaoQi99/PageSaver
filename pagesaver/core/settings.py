@@ -14,6 +14,8 @@ import os
 import secrets
 from pathlib import Path
 
+from pagesaver.settings import pagesaver_settings
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -77,10 +79,11 @@ WSGI_APPLICATION = 'pagesaver.core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+DATABASE_DIR = Path(pagesaver_settings.DATABASE_DIR).absolute()
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": DATABASE_DIR / "db.sqlite3",
     }
 }
 

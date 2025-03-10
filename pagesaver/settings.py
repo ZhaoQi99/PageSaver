@@ -1,4 +1,5 @@
 import importlib.util
+import os
 from pathlib import Path
 
 DEFAULTS = {
@@ -7,9 +8,10 @@ DEFAULTS = {
         "path": "./var",
     },
     "TITLE_PROPERTY": "title",
-    "LINK_PROPERTY": "link",
+    "LINK_PROPERTY": "Link",
     "MHTML_PROPERTY": "mhtml",
     "SERVER_BIND": "0.0.0.0:8001",
+    "DATABASE_DIR": os.getcwd()
 }
 
 
